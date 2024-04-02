@@ -1,0 +1,149 @@
+* {
+    border: none;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px black; */
+    padding: 30px;
+    
+}
+
+.nav {
+    display: flex;
+    justify-content:flex-start ;
+    align-items: flex-start;
+    /* border: solid 1px black; */
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px black; */
+    height: 100vh;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+}
+
+
+.aba {
+    /* background-color: #999; */
+    background-color: #7c7c7c;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px 5px 0px 0px;
+    margin-right: 2px;
+}
+
+.abaSelecionada {
+    /* background-color: #248 !important; */
+    background-color: #248 !important;
+}
+
+.if_principal {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /* border: 1px solid red; */
+}
+
+.btn_geral {
+    /* background-color: #999; */
+    background-color: #248;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+
+/* criar Evento*/
+.elementosForm {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: solid 1px black; */
+    flex-direction: column;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.botoesForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid 1px black; */
+}
+
+.campoForm {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* border: solid 1px black; */
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.campoForm label, .campoFormUrgencia label{
+    text-transform: uppercase;
+}
+
+.campoForm input {
+    /* border: solid 1px black; */
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+.campoFormUrgencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* border: solid 1px black; */
+}
+
+#bodyCriarEvento {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: solid 1px black; */
+}
+
+/*
+#urgenciaAlta {
+    background-color: red;
+    border-radius: 5px;
+}
+#urgenciaMedia {
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+#urgenciaBaixa {
+    background-color: green;
+    border-radius: 5px;
+
+}
+*/
+
+/************/

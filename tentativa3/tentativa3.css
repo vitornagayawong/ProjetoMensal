@@ -1,0 +1,16 @@
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 0.625;
+}
+
+.header {
+    max-height: 10rem;
+    height: 10rem;
+}
+
+.header-h1 {
+    text-align: center;
+}

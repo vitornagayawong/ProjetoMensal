@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tentativa2.css">
+</head>
+<body id="bodyCriarEvento">
+    <div class="elementosForm">
+        <div class="campoForm">
+            <label for="">Título</label>
+            <input type="text" name="titulo" id="titulo">
+        </div>
+        <div class="campoForm">
+            <label for="">Descrição</label>
+            <input type="text" name="descricao" id="descricao">
+        </div>
+        <div class="campoForm">
+            <label for="">Data</label>
+            <input type="date" name="data" id="data">
+        </div>
+        <div class="campoForm">
+            <label for="">Hora de Início</label>
+            <input type="time" name="hrInicio" id="hrInicio">
+        </div>
+        <div class="campoForm">
+            <label for="">Hora do fim</label>
+            <input type="time" name="hrFim" id="hrFim">
+        </div>
+        <div class="campoFormUrgencia">
+            <label for="" id="labelUrgencia">Urgência</label>   
+            <input type="radio" name="urgencia" id="urgenciaAlta" class="radioUrgencia"> Alta         
+            <input type="radio" name="urgencia" id="urgenciaMedia" class="radioUrgencia"> Média         
+            <input type="radio" name="urgencia" id="UrgenciaBaixa" class="radioUrgencia"> Baixa         
+        </div>
+    </div>
+    <div class="botoesForm">
+        <button class="btn_geral" id="btn_geral_gravar">Gravar</button>
+        <button class="btn_geral" id="btn_geral_cancelar">Cancelar</button>
+    </div>
+    <script src="criarEvento.js"></script>
+</body>
+<script src="criarEvento.js"></script>
+</html>

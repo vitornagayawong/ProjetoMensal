@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentativa1</title>
+    <link rel="stylesheet" href="estilo.css">    
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+    <header class="cabecalho">
+        <div class="cantoEsquerdo">
+            <img src="icones/íconeAgenda.png" alt="logomarca" class="imgCantoEsquerdo">
+            <img src="icones/iconeConfiguracao.png" alt="iconeConfiguracao" id="configuracao" class="imgCantoEsquerdo" onclick="abrirConfiguracao()">
+        </div> <br>
+        <div class="tituloSite">
+            <h1>Agenda eletrônica</h1>
+        </div>                
+    </header>
+    <nav id="acessandoAsConfiguracoes">
+        <button onclick="fecharConfiguracao()" id="fechaConfiguracao">X</button>
+        <div>
+            <h2>Configurações disponíveis</h2>           
+            <a id="criaEvento" onclick="criandoEvento()">
+                Criar Evento
+            </a>               
+        </div>
+    </nav>    
+    <section id="cadastroEvento">
+        <button onclick="fecharCadastroEvento()" id="fecharCadastroEvento">X</button>
+        <h2>Cadastro de Evento</h2>
+        <div>
+            <label for="titulo">Título</label>
+            <input type="text" name="titulo">
+            <br>
+            <label for="data">Data do Evento</label>
+            <input type="date" name="dataEvento" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/aaaa">
+            <br>
+            <label for="descricao">Descrição</label>
+            <input type="text" name="descricao">
+            <br>
+            <label for="time">Horário do começo</label>
+            <input type="time" name="horario">
+            <br>
+            <label for="time">Horário do fim</label>
+            <input type="time" name="horario">
+            <br>
+            <nav>
+                <label for="urgencia">Urgência</label>
+                <div class="urgencia-vermelha"></div>
+                <div class="urgencia-amarela"></div>
+                <div class="urgencia-verde"></div>
+            </nav>
+            
+            <button onclick="enviarFormulario()">Enviar</button>
+        </div>
+    </section>
+    <script src="tentativa1.js"></script>    
+</body>
+</html>
