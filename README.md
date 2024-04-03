@@ -1,10 +1,7 @@
                                                                  Agenda Eletrônica
 
-               Um projeto de software é algo complexo por natureza, e o seu sucesso dependerá de inúmeros fatores.
-               Este documento tem por objetivo trazer clareza quanto à necessidade de desenvolver/implantar
-               a agenda eletrônica, disponibilizando detalhes sobre as características-chave necessárias para o produto, 
-               partes interessadas, restrições e riscos, dentre outras informações relevantes para entendimento
-               da necessidade e do que se pretende alcançar com o projeto.
+             O projeto consiste em uma agenda eletrônica na qual os usuários poderão criar seus eventos, nela podendo inserir um título, um       
+             lembrete, um horário de começo e fim do eventos e, também, categorizar a urgência deste em vermelho(urgente), amarelo(mediano),                   verde(não urgente). A tela principal do site mostrará os eventos já criados. O site, também, incluirá uma aba de pesquisa para                    visualizar os eventos criados, conforme o usuário vai digitando na barra de pesquisa.
 
               REQUISITOS FUNCIONAIS
               RF1. O sistema deve permitir que o usuario acesse sua conta, fornecendo
