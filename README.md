@@ -1,11 +1,10 @@
                                                                  Agenda Eletrônica
 
-               Um projeto de software é algo complexo por natureza, e o seu sucesso dependerá de inúmeros fatores.
-               Este documento tem por objetivo trazer clareza quanto à necessidade de desenvolver/implantar
-               a agenda eletrônica, disponibilizando detalhes sobre as características-chave necessárias para o produto, 
-               partes interessadas, restrições e riscos, dentre outras informações relevantes para entendimento
-               da necessidade e do que se pretende alcançar com o projeto.
-
+               a complexidade intrínseca de um projeto de software e ressalta que seu sucesso depende de uma série de fatores. 
+               O objetivo do documento em questão é fornecer clareza sobre a necessidade de desenvolver ou implantar uma agenda eletrônica.
+               Ele busca detalhar as características essenciais do produto, as partes interessadas, as restrições,
+               os riscos e outras informações relevantes para entender a necessidade e os objetivos do projeto.
+               Em resumo, o texto procura esclarecer a importância e os elementos-chave relacionados ao desenvolvimento ou implementação da agenda eletrônica.
               REQUISITOS FUNCIONAIS
               RF1. O sistema deve permitir que o usuario acesse sua conta, fornecendo
                 campos para inserir email e senha previamente cadastrados.
