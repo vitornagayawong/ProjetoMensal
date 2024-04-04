@@ -1,7 +1,6 @@
                                                                  Agenda Eletrônica
 
-             O projeto consiste em uma agenda eletrônica na qual os usuários poderão criar seus eventos, nela podendo inserir um título, um       
-             lembrete, um horário de começo e fim do eventos e, também, categorizar a urgência deste em vermelho(urgente), amarelo(mediano),                   verde(não urgente). A tela principal do site mostrará os eventos já criados. O site, também, incluirá uma aba de pesquisa para                    visualizar os eventos criados, conforme o usuário vai digitando na barra de pesquisa.
+             O projeto consiste em uma agenda eletrônica na qual os usuários poderão criar seus eventos, nela podendo inserir um título, um lembrete, um horário de começo e fim do eventos e, também, categorizar a urgência deste em vermelho(urgente), amarelo(mediano), verde(não urgente). A tela principal do site mostrará os eventos já criados. O site, também, incluirá uma aba de pesquisa para visualizar os eventos criados, conforme o usuário vai digitando na barra de pesquisa.
 
               REQUISITOS FUNCIONAIS
               RF1. O sistema deve permitir que o usuario acesse sua conta, fornecendo
@@ -21,6 +20,8 @@
               RF9. O sistema deve permitir o usuario alterar os dados das tarefas
                    previamente cadastradas.
               RF10. O sistema deve permitir o usuario deletar uma tarefa.
+
+
 
 
               LInguagem utilizadas:
