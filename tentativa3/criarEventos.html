@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentativa 3</title>
+    <link rel="stylesheet" href="css/tentativa3.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-h1">Agenda Eletrônica</h1>
+    </header>
+    <nav class="navigation">
+        <a href="index.html " class="navigation-a">Visualizar eventos</a>
+        <a href="criarEventos.html" class="navigation-a">Criar eventos</a>
+        <a href="pesquisarEventos.html" class="navigation-a">Pesquisar eventos</a>
+    </nav>
+    <main>
+        <div class="principal">
+            <form action="" class="form">
+                <div class="form_information">
+                    <label for="" name="titulo">Título</label>
+                    <input type="text" id="titulo">
+                </div>
+
+                <div class="form_information">
+                    <label for="" name="descricao">Descrição</label>
+                    <input type="text" id="descricao">
+                </div>
+
+                <div class="form_information">
+                    <label for="" name="data">Data</label>
+                    <input type="date" id="data">
+                </div>
+
+                <div class="form_information">
+                    <label for="" name="hrComeco">Horário do começo</label>
+                    <input type="time" id="hrComeco">
+                </div>
+
+                <div class="form_information">
+                    <label for="" name="hrFim">Horário do fim</label>
+                    <input type="time" id="hrFim">
+                </div>
+
+                <div class="form_information">
+                    <label for="" name="hrFim">Urgência</label>
+                    <div class="form_urgencia">
+                        <p class="form_urgencia_alta">Alta</p><input type="radio" name="urgencia" id="urgencia">
+                        <p class="form_urgencia_media">Média</p><input type="radio" name="urgencia" id="urgencia">
+                        <p class="form_urgencia_baixa">Baixa</p><input type="radio" name="urgencia" id="urgencia">
+                    </div>
+                </div>
+
+                <div class="form_information">
+                    <label for="" name="lembrete">Lembretes</label>
+                    <input type="text" id="lembrete">
+                </div>
+
+                <button id="btn-sent-form">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer class="rodape">
+        <p>Site Agenda Eletrônica</p>
+    </footer>
+</body>
+
+<script>
+    btnCreateEvent = document.getElementById("btn-sent-form");
+    btnCreateEvent.addEventListener("click", (e)=>{
+        e.preventDefault();
+       let horaFim = document.getElementById("hrFim").value
+       console.log(horaFim);
+    })
+</script>
+
+</html>
