@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo{
+    display: flex;
+    font-size: 30px;
+    font-weight: 300;
+    justify-content: center;
+}
+.botao{
+    color: #0000FF;
+    font-weight: 500;
+    width: 80px;
+    height: 40px;
+    background-color: aqua;
+}
+.displayBotao{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.vizueve{
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: aqua;
+    width: 80vw;
+    height: 350px;
+    border-radius: 35px;
+    flex-direction: column;
+}
+
+.paragrafo{
+    margin-left: 40px;
+}
+
+.barratext{
+    margin-right: 40px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    margin-left: 40px;
+}
+
+.urgenciaWrapper{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.urgenciaWrapper > p{
+    font-weight: normal;
+}
+
+.urgenciaWrapper span::before{
+    content: '__';
+    color: transparent;
+    border: 1px solid #333;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 90%;
+    
+}
+
+.barradata{
+    margin-left: 40px;
+    margin-right: 950px;
+}
