@@ -1,6 +1,6 @@
 html {
     font-size: 0.625em;
-    --header-nav-color: rgb(231, 231, 231);
+    --header-nav-color: rgba(224, 245, 255, 0.63);
 }
 
 body {
@@ -40,7 +40,7 @@ body {
     padding: 1rem;
     border-radius: 0.5rem 0.5rem 0 0;
     text-decoration: none;
-    background-color: rgba(11, 16, 167, 0.25);
+    background-color: rgba(3, 9, 182, 0.25);
     color: black;
 }
 
@@ -67,16 +67,17 @@ body {
     min-height: calc(100vh - 10rem - 40px);
     /* margin-bottom: 2rem; */
     padding-bottom: 3rem;
+    background-color: rgb(240, 240, 240);
 }
 
-.rodape {
-    /* border: 1px solid red; */
 
-}
 
-.rodape {
+.rodape p{
+    background-color: var(--header-nav-color);
     text-align: center;
     border-top: 1px solid black;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 .form {
@@ -152,15 +153,57 @@ body {
 /* PESQUISAR EVENTOS */
 
 /* ************************************************************ */
+.principal_search {
+    margin-top: 0;
+    /* padding-left: 3rem; */
+    padding-top: 3rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+    font-size: 2.5rem;
+    text-align: center;
+}
 
 .principal_nav {
     width: 90%;
     margin: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
+    /* padding-top: 3rem; */
 }
 
 .principal_nav input {
     width: 90%;
+    padding-top: 1.5rem;
+    margin-left: 1rem;
+}
+
+/* ************************************************************ */
+/* VISUALIZAR EVENTOS */
+
+/* ************************************************************ */
+
+.apointment {
+    border: 1px solid black;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    background-color: rgb(125, 255, 125);
+}
+
+.apointment_2 {
+    background-color: rgb(255, 125, 125);
+}
+
+.apointment > * {
+    margin: 0.3rem;
+    border: 1px solid black;
+}
+
+.apointment_date, .apointment_hour {
+    margin-right: 85%;
+}
+
+.apointment_notes {
+    height: 6rem;
 }
