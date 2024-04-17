@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minha agenda</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <h1>Agenda</h1>
+</header>
+
+<main>
+    <div class="evento-form">
+        <label for="titulo">Título do Evento:</label>
+        <input type="text" id="titulo" name="titulo" required><br>
+
+        <label for="data">Data do Evento:</label>
+        <input type="date" id="data" name="data" required><br>
+
+        <label for="urgencia">Urgência:</label>
+        <div class="urgencia-buttons">
+            <button type="button" class="urgencia-vermelho" onclick="setUrgencia('vermelho')">alta</button>
+            <button type="button" class="urgencia-amarelo" onclick="setUrgencia('amarelo')">media</button>
+            <button type="button" class="urgencia-verde" onclick="setUrgencia('verde')">baixa</button>
+        </div>
+
+        <button onclick="adicionarEvento()">Adicionar Evento</button>
+    </div>
+</main>
+
+<footer>
+    <a href="eventos.html">Ver Eventos</a>
+</footer>
+
+</body>
+</html>
