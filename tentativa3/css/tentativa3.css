@@ -123,6 +123,43 @@ body {
     font-size: 1em;
 }
 
+.lembrete{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background-color: rgb(255, 125, 125);
+    width: 50vw;
+    height: 200px;
+    border-radius: 35px;
+    flex-direction: column;
+    margin: 32px;
+    padding: 32px;
+}
 
+.namecompromisso{
+    font-size: 20px;
+}
+
+
+.urgenciawrapper{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.urgenciawrapper > p{
+    font-weight: normal;
+}
+
+.urgenciawrapper span::before{
+    content: '__';
+    color: transparent;
+    border: 1px solid #333;
+    background-color:   red;
+    border-radius: 90%;
+    
+}
 
 
