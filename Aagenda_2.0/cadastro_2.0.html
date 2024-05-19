@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Aagenda_2.0.css">
+
 </head>
 
 <body>
@@ -22,46 +23,49 @@
 
     <h2 class="title">Cadastro de Eventos</h2>
 
-    <div class="container">
+    <div class="align-container">
+        <div class="container">
+            <form id="addEvent">
+                <label for="event-name">Nome do Evento:</label>
+                <input type="text" id="event-name" required>
+                <label for="event-description">Descrição do Evento:</label>
+                <input type="text" id="event-description" required>
+                <label for="event-date">Data do Evento:</label>
+                <input type="date" id="event-date" required>
+
+                <div id="defineTime">
+                    <label for="startTime">Horario de inicio</label>
+                    <input type="time" id="event-start-time">
+                    <label for="endTime">Horario de termino</label>
+                    <input type="time" id="event-end-time">
+                </div>
+
+                <label for="urgency" class="justifyUrgenci">Urgência</label><br>
+
+                <div id="defineUrgenci">
+                    <div class="urgenciMargin red">
+                        <input type="radio" id="alta" name="urgency" value="alta">
+                        <label for="alta" class="urgenciMargin">Alta</label><br>
+                    </div>
+                    <div class="urgenciMargin yellow">
+                        <input type="radio" id="moderada" name="urgency" value="moderada">
+                        <label for="moderada" class="urgenciMargin">Moderada</label><br>
+                    </div>
+                    <div class="urgenciMargin green">
+                        <input type="radio" id="baixa" name="urgency" value="baixa">
+                        <label for="baixa" class="urgenciMargin">Baixa</label><br>
+                    </div>
+                </div>
+
+                <button type="submit">Adicionar Evento</button>
+            </form>
+        </div>
+
+        <!-- Mover eventsList para fora do container -->
         <div id="eventsList"></div>
-        <form id="addEvent">
-            <label for="event-name">Nome do Evento:</label>
-            <input type="text" id="event-name" required>
-            <label for="event-description">Descrição do Evento:</label> <!-- Alteração feita aqui -->
-            <input type="text" id="event-description" required> <!-- Alteração feita aqui -->
-            <label for="event-date">Data do Evento:</label>
-            <input type="date" id="event-date" required>
-
-            <div id="defineTime">
-                <label for="startTime">Horario de inicio</label>
-                <input type="time" id="event-start-time"> <!-- Adicionado o id -->
-                <label for="endTime">Horario de termino</label>
-                <input type="time" id="event-end-time"> <!-- Adicionado o id -->
-            </div>
-
-            <label for="urgency" class="justifyUrgenci">Urgência</label><br>
-
-            <div id="defineUrgenci">
-                <div class="urgenciMargin red">
-                    <input type="radio" id="alta" name="urgency" value="alta">
-                    <label for="alta" class="urgenciMargin">Alta</label><br>
-                </div>
-                <div class="urgenciMargin yellow">
-                    <input type="radio" id="moderada" name="urgency" value="moderada">
-                    <label for="moderada" class="urgenciMargin">Moderada</label><br>
-                </div>
-                <div class="urgenciMargin green">
-                    <input type="radio" id="baixa" name="urgency" value="baixa">
-                    <label for="baixa" class="urgenciMargin">Baixa</label><br>
-                </div>
-            </div>
-            
-            <button type="submit">Adicionar Evento</button>
-        </form>
     </div>
 
-    <script src="cadastro_2.0.js"></script> <!-- Lembre-se de substituir "seu_script.js" pelo nome do seu arquivo JavaScript -->
-
+    <script src="cadastro_2.0.js"> </script>
 </body>
 
 </html>
