@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aagenda</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div>
+        <header class="cabeçalho">
+            <h1 class="titulo">Aagenda</h1>
+            <nav class="menu">
+                <ul class="botmenu">
+                    <a class="bot negrito" href="http://127.0.0.1:5500/inicio/inicio.html"> visualizar eventos</a>             
+                    <a class="bot negrito" href="http://127.0.0.1:5500/cadatro/cadastro.html"> cadastrar eventos</a>             
+                    <a class="bot negrito" href="http://127.0.0.1:5500/pequisa/pesquisa.html"> pesquisar eventos</a>             
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <h2 class="titulo">cadastrar eventos eventos</h2>
+    
+    <div class="criation negrito">
+        <p class="cadastro">
+            titulo do compromisso
+            <input type="text" placeholder="titulo...">
+            descrição de compromisso
+            <input type="text" placeholder="descrição">
+            data: <input type="date">
+        </p>
+            <div>
+                <ul class="horario">
+                    <li >horario de inicio: <input type="time"></li>
+                    <li >horario de termino: <input type="time"></li>
+                </ul>
+            </div>
+        <p class="cadastro">urgencia</p>
+            <div class="DefineUrgencia">
+                <div class="circulo verde"></div> <ul class="texto cadastro">baixa</ul>
+                <div class="circulo amarelo"></div> <ul class="texto cadastro">moderada</ul>
+                <div class="circulo vermelho"></div> <ul class="texto2 cadastro">alta</ul>
+            </div>
+    </div>
+
+
+</body>
+</html>

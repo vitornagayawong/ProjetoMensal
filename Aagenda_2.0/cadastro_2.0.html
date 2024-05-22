@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Aagenda_2.0.css">
+</head>
+
+<body>
+    <div>
+        <header class="head">
+            <h1 class="title">Agenda</h1>
+        </header>
+    </div>
+
+    <div class="align-container">
+        <div class="container">
+            <form id="addEvent">
+                <label for="event-name">Nome do Evento:</label>
+                <input type="text" class="criateEvent" id="event-name" required>
+                <label for="event-description">Descrição do Evento:</label>
+                <input type="text" class="criateEvent" id="event-description" required>
+                <label for="event-date">Data do Evento:</label>
+                <input type="date" id="event-date" required>
+
+                <div id="defineTime">
+                    <label for="startTime">Horario de inicio</label>
+                    <input type="time" id="event-start-time">
+                    <label for="endTime">Horario de termino</label>
+                    <input type="time" id="event-end-time">
+                </div>
+
+                <label for="urgency" class="justifyUrgenci">Urgência</label><br>
+
+                <div id="defineUrgenci">
+                    <div class="urgenciMargin red">
+                        <input type="radio" id="alta" name="urgency" value="alta">
+                        <label for="alta" class="urgenciMargin">Alta</label><br>
+                    </div>
+                    <div class="urgenciMargin yellow">
+                        <input type="radio" id="moderada" name="urgency" value="moderada">
+                        <label for="moderada" class="urgenciMargin">Moderada</label><br>
+                    </div>
+                    <div class="urgenciMargin green">
+                        <input type="radio" id="baixa" name="urgency" value="baixa">
+                        <label for="baixa" class="urgenciMargin">Baixa</label><br>
+                    </div>
+                </div>
+
+                <button type="submit">Adicionar Evento</button>
+            </form>
+        </div>
+
+        <div>
+            <input type="text" class="search-bar" placeholder="Pesquisar eventos...">
+            <div id="eventsList"></div>
+        </div>
+    </div>
+
+    <script src="cadastro_2.0.js"></script>
+
+</body>
+
+</html>
