@@ -1,9 +1,8 @@
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const addEventForm = document.getElementById('addEvent');
     const eventsList = document.getElementById('eventsList');
 
-    addEventForm.addEventListener('submit', function (event) {
+    addEventForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
         const eventName = document.getElementById('event-name').value;
