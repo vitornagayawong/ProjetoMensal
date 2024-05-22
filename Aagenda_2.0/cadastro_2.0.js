@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const addEventForm = document.getElementById('addEvent');
     const eventsList = document.getElementById('eventsList');
@@ -16,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
         eventItem.classList.add('event-item');
         eventItem.innerHTML = `
             <h3>${eventName}</h3>
-            <p><strong>Description:</strong> ${eventDescription}</p>
-            <p><strong>Date:</strong> ${eventDate}</p>
-            <p><strong>Start Time:</strong> ${eventStartTime}</p>
-            <p><strong>End Time:</strong> ${eventEndTime}</p>
-            <p><strong>Urgency:</strong> ${eventUrgency}</p>
+            <p><strong>Descrição:</strong> ${eventDescription}</p>
+            <p><strong>Data:</strong> ${eventDate}</p>
+            <p><strong>Horário de Início:</strong> ${eventStartTime}</p>
+            <p><strong>Horário de Término:</strong> ${eventEndTime}</p>
+            <p><strong>Urgência:</strong> ${eventUrgency}</p>
         `;
 
         eventsList.appendChild(eventItem);

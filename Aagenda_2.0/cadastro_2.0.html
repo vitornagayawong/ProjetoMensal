@@ -6,30 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Aagenda_2.0.css">
-
 </head>
 
 <body>
     <div>
         <header class="head">
             <h1 class="title">Agenda</h1>
-            <nav class="menu">
-                <a class="menuButton" href="">inicio</a>
-                <a class="menuButton" href="">cadastro</a>
-                <a class="menuButton" href="">pesquisa</a>
-            </nav>
         </header>
     </div>
-
-    <h2 class="title">Cadastro de Eventos</h2>
 
     <div class="align-container">
         <div class="container">
             <form id="addEvent">
                 <label for="event-name">Nome do Evento:</label>
-                <input type="text" id="event-name" required>
+                <input type="text" class="criateEvent" id="event-name" required>
                 <label for="event-description">Descrição do Evento:</label>
-                <input type="text" id="event-description" required>
+                <input type="text" class="criateEvent" id="event-description" required>
                 <label for="event-date">Data do Evento:</label>
                 <input type="date" id="event-date" required>
 
@@ -61,11 +53,14 @@
             </form>
         </div>
 
-        <!-- Mover eventsList para fora do container -->
-        <div id="eventsList"></div>
+        <div>
+            <input type="text" class="search-bar" placeholder="Pesquisar eventos...">
+            <div id="eventsList"></div>
+        </div>
     </div>
 
-    <script src="cadastro_2.0.js"> </script>
+    <script src="cadastro_2.0.js"></script>
+
 </body>
 
-</html>git
+</html>
