@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const eventItem = document.createElement('div');
         eventItem.classList.add('event-item', `urgency-${eventUrgency}`);
         eventItem.innerHTML = `
-            <h3>${eventName}</h3>
-            <p><strong>Descrição:</strong> ${eventDescription}</p>
-            <p><strong>Data:</strong> ${eventDate}</p>
-            <p><strong>Horário de Início:</strong> ${eventStartTime}</p>
-            <p><strong>Horário de Término:</strong> ${eventEndTime}</p>
-            <p><strong>Urgência:</strong> ${eventUrgency}</p>
-            <button class="delete-button">Excluir</button>
-        `;
+    <h3>${eventName}</h3>
+    <p><strong>Descrição:</strong> ${eventDescription}</p>
+    <p><strong>Data:</strong> ${eventDate}</p>
+    <p><strong>Horário de Início:</strong> ${eventStartTime}</p>
+    <p><strong>Horário de Término:</strong> ${eventEndTime}</p>
+    <p><strong>Urgência:</strong> ${eventUrgency}</p>
+    <button class="delete-button">Excluir</button>
+`;
 
         eventItem.querySelector('.delete-button').addEventListener('click', function () {
             eventItem.remove();
@@ -49,3 +49,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
