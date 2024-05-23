@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const addEventForm = document.getElementById('addEvent');
     const eventsList = document.getElementById('eventsList');
     const searchBar = document.querySelector('.search-bar');
@@ -28,23 +28,33 @@ document.addEventListener('DOMContentLoaded', function() {
     function addEventToList(name, description, date, startTime, endTime, urgency) {
         const eventItem = document.createElement('div');
         eventItem.classList.add('event-item');
-        eventItem.innerHTML = `
-            <h3>${name}</h3>
-            <p><strong>Descrição:</strong> ${description}</p>
-            <p><strong>Data:</strong> ${date}</p>
-            <p><strong>Horário de Início:</strong> ${startTime}</p>
-            <p><strong>Horário de Término:</strong> ${endTime}</p>
-            <p><strong>Urgência:</strong> ${urgency}</p>
-            <button class="edit-button">Editar</button>
-            <button class="delete-button">Excluir</button>
-        `;
 
-        eventItem.querySelector('.delete-button').addEventListener('click', function() {
+        // Adicionar classe de urgência com base no valor da urgência
+        if (urgency === 'alta') {
+            eventItem.classList.add('urgency-alta');
+        } else if (urgency === 'moderada') {
+            eventItem.classList.add('urgency-moderada');
+        } else if (urgency === 'baixa') {
+            eventItem.classList.add('urgency-baixa');
+        }
+
+        eventItem.innerHTML = `
+        <h3>${name}</h3>
+        <p><strong>Descrição:</strong> ${description}</p>
+        <p><strong>Data:</strong> ${date}</p>
+        <p><strong>Horário de Início:</strong> ${startTime}</p>
+        <p><strong>Horário de Término:</strong> ${endTime}</p>
+        <p><strong>Urgência:</strong> ${urgency}</p>
+        <button class="edit-button">Editar</button>
+        <button class="delete-button">Excluir</button>
+    `;
+
+        eventItem.querySelector('.delete-button').addEventListener('click', function () {
             eventItem.remove();
             saveEventsToLocalStorage();
         });
 
-        eventItem.querySelector('.edit-button').addEventListener('click', function() {
+        eventItem.querySelector('.edit-button').addEventListener('click', function () {
             document.getElementById('event-name').value = name;
             document.getElementById('event-description').value = description;
             document.getElementById('event-date').value = date;
@@ -59,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         eventsList.appendChild(eventItem);
     }
 
-    addEventForm.addEventListener('submit', function(event) {
+    addEventForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
         const eventName = document.getElementById('event-name').value;
@@ -74,11 +84,11 @@ document.addEventListener('DOMContentLoaded', function() {
         addEventForm.reset();
     });
 
-    searchBar.addEventListener('input', function() {
+    searchBar.addEventListener('input', function () {
         const searchText = searchBar.value.toLowerCase();
         const eventItems = eventsList.querySelectorAll('.event-item');
 
-        eventItems.forEach(function(eventItem) {
+        eventItems.forEach(function (eventItem) {
             const eventName = eventItem.querySelector('h3').textContent.toLowerCase();
             if (eventName.includes(searchText)) {
                 eventItem.style.display = 'block';

@@ -29,9 +29,7 @@
     border-radius: 5px;
     flex: 1;
     height: 400px;
-    /* Define a altura fixa */
     overflow-y: auto;
-    /* Permite a rolagem vertical */
 }
 
 .search-and-events {
