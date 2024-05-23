@@ -9,11 +9,9 @@
 </head>
 
 <body>
-    <div>
-        <header class="head">
-            <h1 class="title">Agenda</h1>
-        </header>
-    </div>
+    <header class="head">
+        <h1 class="title">Agenda</h1>
+    </header>
 
     <div class="align-container">
         <div class="container">
@@ -26,9 +24,9 @@
                 <input type="date" id="event-date" required>
 
                 <div id="defineTime">
-                    <label for="startTime">Horario de inicio</label>
+                    <label for="startTime">Horário de início</label>
                     <input type="time" id="event-start-time">
-                    <label for="endTime">Horario de termino</label>
+                    <label for="endTime">Horário de término</label>
                     <input type="time" id="event-end-time">
                 </div>
 
@@ -53,14 +51,13 @@
             </form>
         </div>
 
-        <div>
+        <div class="search-and-events">
             <input type="text" class="search-bar" placeholder="Pesquisar eventos...">
             <div id="eventsList"></div>
         </div>
     </div>
 
     <script src="cadastro_2.0.js"></script>
-
 </body>
 
 </html>

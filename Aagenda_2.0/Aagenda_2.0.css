@@ -7,9 +7,16 @@
 
 .title {
     font-size: 30px;
+    text-align: center; /* Centraliza o título */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.align-container {
     display: flex;
-    justify-content: center;
-    margin: 30px;
+    flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
 }
 
 .container {
@@ -21,44 +28,21 @@
     padding: 20px;
     border: 1px solid black;
     border-radius: 5px;
+    flex: 1; /* Permite que o contêiner ocupe o espaço disponível */
 }
 
-input[type="date"],
-button {
+.search-and-events {
+    display: flex;
+    flex-direction: column;
+    flex: 2; /* Permite que este contêiner ocupe mais espaço */
+}
+
+.search-bar {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
     box-sizing: border-box;
-}
-
-.criateEvent {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-#defineUrgenci {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.justifyUrgenci {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.urgenciMargin {
-    top: 15px;
-    margin: 10px 25px 10px 0px;
-}
-
-#defineTime {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
 }
 
 #eventsList {
@@ -66,6 +50,7 @@ button {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    background-color: #f9f9f9; /* Adiciona uma cor de fundo */
 }
 
 .event-item {
@@ -73,7 +58,6 @@ button {
     padding: 10px;
     margin-bottom: 10px;
     background-color: #f9f9f9;
-    max-width: 600px;
 }
 
 /* Classes de urgência */
@@ -89,42 +73,6 @@ button {
     border-left: 5px solid green;
 }
 
-.align-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-}
-
-.search-container {
-    flex: 1;
-}
-
-.search-bar {
-    width: 100%;
-}
-
-.container {
-    background-color: rgb(0, 191, 255);
-    max-width: 500px;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.head {
-    border: 3px solid black;
-    background-color: rgb(0, 191, 255);
-    padding: 20px 20px 0px 20px;
-}
-
-.title {
-    font-size: 30px;
-    text-align: center;
-    margin: 0;
-}
-
 input[type="date"],
 button {
     width: 100%;
@@ -134,7 +82,7 @@ button {
 }
 
 .criateEvent {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -163,31 +111,8 @@ button {
     margin-top: 10px;
 }
 
-#eventsList {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.event-item {
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-}
-
-.align-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.search-bar {
-    width: calc(100% - 20px);
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+@media (max-width: 768px) {
+    .align-container {
+        flex-direction: column; /* Altera para coluna em telas menores */
+    }
 }
