@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addEventForm = document.getElementById('addEvent');
     const eventsList = document.getElementById('eventsList');
     const searchBar = document.querySelector('.search-bar');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
     function saveEventsToLocalStorage() {
         const events = [];
@@ -39,15 +40,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         eventItem.innerHTML = `
-        <h3>${name}</h3>
-        <p><strong>Descrição:</strong> ${description}</p>
-        <p><strong>Data:</strong> ${date}</p>
-        <p><strong>Horário de Início:</strong> ${startTime}</p>
-        <p><strong>Horário de Término:</strong> ${endTime}</p>
-        <p><strong>Urgência:</strong> ${urgency}</p>
-        <button class="edit-button">Editar</button>
-        <button class="delete-button">Excluir</button>
-    `;
+            <h3>${name}</h3>
+            <p><strong>Descrição:</strong> ${description}</p>
+            <p><strong>Data:</strong> ${date}</p>
+            <p><strong>Horário de Início:</strong> ${startTime}</p>
+            <p><strong>Horário de Término:</strong> ${endTime}</p>
+            <p><strong>Urgência:</strong> ${urgency}</p>
+            <button class="edit-button">Editar</button>
+            <button class="delete-button">Excluir</button>
+        `;
 
         eventItem.querySelector('.delete-button').addEventListener('click', function () {
             eventItem.remove();
@@ -60,41 +61,65 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('event-date').value = date;
             document.getElementById('event-start-time').value = startTime;
             document.getElementById('event-end-time').value = endTime;
-            document.querySelector(`input[name="urgency"][value="${urgency}"]`).checked = true;
+
+            const urgencyInputs = document.querySelectorAll('input[name="urgency"]');
+            urgencyInputs.forEach(input => {
+                if (input.value === urgency) {
+                    input.checked = true;
+                }
+            });
 
             eventItem.remove();
             saveEventsToLocalStorage();
         });
 
         eventsList.appendChild(eventItem);
+        saveEventsToLocalStorage();
     }
 
-    addEventForm.addEventListener('submit', function (event) {
-        event.preventDefault();
+    addEventForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('event-name').value;
+        const description = document.getElementById('event-description').value;
+        const date = document.getElementById('event-date').value;
+        const startTime = document.getElementById('event-start-time').value;
+        const endTime = document.getElementById('event-end-time').value;
+        const urgency = document.querySelector('input[name="urgency"]:checked').value;
 
-        const eventName = document.getElementById('event-name').value;
-        const eventDescription = document.getElementById('event-description').value;
-        const eventDate = document.getElementById('event-date').value;
-        const eventStartTime = document.getElementById('event-start-time').value;
-        const eventEndTime = document.getElementById('event-end-time').value;
-        const eventUrgency = document.querySelector('input[name="urgency"]:checked').value;
+        addEventToList(name, description, date, startTime, endTime, urgency);
 
-        addEventToList(eventName, eventDescription, eventDate, eventStartTime, eventEndTime, eventUrgency);
-        saveEventsToLocalStorage();
         addEventForm.reset();
     });
 
     searchBar.addEventListener('input', function () {
-        const searchText = searchBar.value.toLowerCase();
-        const eventItems = eventsList.querySelectorAll('.event-item');
+        const searchTerm = searchBar.value.toLowerCase();
+        const eventItems = document.querySelectorAll('.event-item');
 
-        eventItems.forEach(function (eventItem) {
+        eventItems.forEach(eventItem => {
             const eventName = eventItem.querySelector('h3').textContent.toLowerCase();
-            if (eventName.includes(searchText)) {
-                eventItem.style.display = 'block';
+            const eventDescription = eventItem.querySelector('p:nth-of-type(1)').textContent.toLowerCase();
+
+            if (eventName.includes(searchTerm) || eventDescription.includes(searchTerm)) {
+                eventItem.style.display = '';
             } else {
                 eventItem.style.display = 'none';
             }
+        });
+    });
+
+    // Botão "Up"
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
 
