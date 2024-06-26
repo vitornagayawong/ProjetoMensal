@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchBar = document.querySelector('.search-bar');
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
+    const popup = document.getElementById('popup');
+    const popupMessage = document.getElementById('popupMessage');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+
     function saveEventsToLocalStorage() {
         const events = [];
         document.querySelectorAll('.event-item').forEach(eventItem => {
@@ -75,6 +79,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
         eventsList.appendChild(eventItem);
         saveEventsToLocalStorage();
+        scheduleReminder(name, date, startTime);
+    }
+
+    function scheduleReminder(name, date, startTime) {
+        const eventDateTime = new Date(`${date}T${startTime}`);
+        const reminderTime = new Date(eventDateTime.getTime() - 20 * 60000); // 20 minutos antes
+
+        const now = new Date();
+
+        if (reminderTime > now) {
+            const timeout = reminderTime.getTime() - now.getTime();
+            setTimeout(() => {
+                showReminder(name);
+            }, timeout);
+        }
+    }
+
+    function showReminder(name) {
+        popupMessage.textContent = `Lembrete: Você tem um compromisso: ${name}`;
+        popup.style.display = 'flex';
     }
 
     addEventForm.addEventListener('submit', function (e) {
@@ -107,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Botão "Up"
     window.addEventListener('scroll', function () {
         if (window.scrollY > 300) {
             scrollToTopBtn.style.display = 'block';
@@ -121,6 +144,10 @@ document.addEventListener('DOMContentLoaded', function () {
             top: 0,
             behavior: 'smooth'
         });
+    });
+
+    closePopupBtn.addEventListener('click', function () {
+        popup.style.display = 'none';
     });
 
     loadEventsFromLocalStorage();
